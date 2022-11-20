@@ -88,7 +88,7 @@ describe("getSongsOverThreeMinutes()", () => {
   });
 });
 
-describe.only("getTitleTracks()", () => {
+describe("getTitleTracks()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
