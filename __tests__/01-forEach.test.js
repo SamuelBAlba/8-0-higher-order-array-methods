@@ -68,7 +68,7 @@ describe("printSongDetails()", () => {
   });
 });
 
-describe("printSongTitlesOverThreeMinutes()", () => {
+describe.only("printSongTitlesOverThreeMinutes()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
