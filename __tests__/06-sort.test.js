@@ -74,7 +74,7 @@ describe("sortByArtistNameDescending()", () => {
   });
 });
 
-describe("sortBySongTitleAscending()", () => {
+describe.only("sortBySongTitleAscending()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
