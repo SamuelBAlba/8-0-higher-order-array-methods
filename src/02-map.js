@@ -13,8 +13,17 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {string[]} An array of strings, all of which are song titles.
  */
-function getSongTitles(songs) {}
+function getSongTitles(songs) {
+  // loop through songs, each element is a song
+  let allTitles = songs.map((song) => {
+    // return only thr titles
+    return song.title
+  })
+  // return the new array allTitles with all the titles in it
+  return allTitles
+}
 
+// use map() to return array of all songs
 /**
  * Returns an array of all of the song titles with the artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -24,7 +33,15 @@ function getSongTitles(songs) {}
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
-function getSongDetails(songs) {}
+function getSongDetails(songs) {
+  // loop through songs
+  let allDetails = songs.map((song) => {
+    // at each song pull title and artist
+    return song.title + " by " + song.artist
+  })
+  // return new array 
+  return allDetails
+}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -35,7 +52,15 @@ function getSongDetails(songs) {}
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  let newObject = songs.map((song) => {
+   // syntax bellow for creating keys in object
+   // bracket notation :
+    return {[song.title]: song.artist}
+  })
+
+  return newObject
+}
 
 module.exports = {
   getSongTitles,
