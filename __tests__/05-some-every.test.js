@@ -46,7 +46,7 @@ describe("anySongIsOverFourMinutes()", () => {
   });
 });
 
-describe("anySongIsByPeanut()", () => {
+describe.only("anySongIsByPeanut()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
